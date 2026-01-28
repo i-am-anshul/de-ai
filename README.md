@@ -8,7 +8,7 @@ A Claude Code skill that detects and removes AI writing patterns from any textâ€
 
 ```bash
 /plugin marketplace add i-am-anshul/de-ai
-/plugin install de-ai@de-ai-marketplace
+/plugin install de-ai@i-am-anshul-de-ai
 ```
 
 Works on **Windows**, **macOS**, and **Linux**. Requires [Claude Code](https://claude.ai/code).

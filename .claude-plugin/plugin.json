@@ -1,6 +1,0 @@
-{
-  "name": "de-ai",
-  "version": "1.0.0",
-  "description": "Remove AI-generated writing patterns. Make text sound human.",
-  "skills": ["../SKILL.md"]
-}

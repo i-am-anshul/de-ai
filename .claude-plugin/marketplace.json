@@ -1,13 +1,18 @@
 {
   "name": "de-ai-marketplace",
   "owner": {
-    "name": "Anshul"
+    "name": "Anshul",
+    "email": "anshul75090@gmail.com"
   },
   "plugins": [
     {
       "name": "de-ai",
+      "source": "./de-ai-plugin",
       "description": "Remove AI-generated writing patterns. Make text sound human.",
-      "source": "./de-ai-plugin"
+      "version": "1.0.0",
+      "author": {
+        "name": "Anshul"
+      }
     }
   ]
 }
