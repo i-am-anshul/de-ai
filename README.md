@@ -1,74 +1,75 @@
-# de-ai Skill
+# de-ai
 
-Remove AI writing patterns from text. Make your writing sound human.
+A Claude Code skill that removes AI-generated writing patterns from text, making it sound natural and human-written.
 
 ## What it does
 
-de-ai detects and fixes common AI-generated writing patterns:
-- Banned words (delve, leverage, tapestry, etc.)
-- Inflated significance ("pivotal moment", "testament to")
-- Promotional language ("vibrant", "nestled", "breathtaking")
-- Superficial -ing analyses ("highlighting", "showcasing")
-- Vague attributions ("experts say", "industry reports")
-- Em dash and boldface overuse
-- Rule of three patterns
-- Sycophantic tone ("Great question!")
-- Chatbot artifacts ("I hope this helps!")
+Detects and fixes common AI writing patterns:
 
-It also teaches how to add soul: varied rhythm, opinions, specificity.
+- **Banned words** - delve, leverage, tapestry, utilize, etc.
+- **Inflated significance** - "pivotal moment", "testament to", "rich history"
+- **Promotional fluff** - "vibrant", "nestled", "breathtaking", "renowned"
+- **Superficial analysis** - overuse of -ing words like "highlighting", "showcasing"
+- **Vague attributions** - "experts say", "industry reports suggest"
+- **Formatting tics** - em dash overuse, unnecessary boldface
+- **Rule of three** - forced triple patterns ("X, Y, and Z")
+- **Sycophantic tone** - "Great question!", "Excellent point!"
+- **Chatbot artifacts** - "I hope this helps!", "Feel free to ask"
 
-## Installation (already done)
+Also provides guidance on adding soul to writing: varied rhythm, real opinions, specific details.
 
-The skill has been installed globally with this structure:
+## Installation
 
-```
-~/.claude/skills/
-├── .claude-plugin/
-│   └── marketplace.json    # Registers skills as a local marketplace
-└── de-ai/
-    ├── SKILL.md            # Main skill instructions
-    └── README.md           # This file
-```
+1. Clone this repo into your Claude skills directory:
+   ```bash
+   mkdir -p ~/.claude/skills
+   git clone https://github.com/i-am-anshul/de-ai.git ~/.claude/skills/de-ai
+   ```
 
-Settings added to `~/.claude/settings.json`:
-```json
-{
-  "enabledPlugins": {
-    "de-ai@local-skills": true
-  },
-  "extraKnownMarketplaces": {
-    "local-skills": {
-      "source": {
-        "source": "directory",
-        "path": "/Users/Anshul/.claude/skills"
-      }
-    }
-  }
-}
-```
+2. Create the marketplace config at `~/.claude/skills/.claude-plugin/marketplace.json`:
+   ```json
+   {
+     "name": "local-skills",
+     "skills": {
+       "de-ai": {
+         "description": "Remove AI writing patterns from text",
+         "version": "1.0.0",
+         "path": "de-ai"
+       }
+     }
+   }
+   ```
+
+3. Add to your Claude settings (`~/.claude/settings.json`):
+   ```json
+   {
+     "enabledPlugins": {
+       "de-ai@local-skills": true
+     },
+     "extraKnownMarketplaces": {
+       "local-skills": {
+         "source": {
+           "source": "directory",
+           "path": "~/.claude/skills"
+         }
+       }
+     }
+   }
+   ```
+
+4. Restart Claude Code.
 
 ## Usage
 
-The skill triggers automatically when Claude detects you're:
-- Editing or reviewing text for AI patterns
-- Writing resumes, cover letters, or professional content
-- Asking to make text "sound more human" or "less AI"
+The skill activates automatically when you:
+- Edit or review text for AI patterns
+- Write resumes, cover letters, LinkedIn posts, or professional content
+- Ask Claude to make text "sound more human" or "less AI-like"
 
-You can also explicitly reference the skill:
-- "Use de-ai to clean up this text"
+You can also invoke it explicitly:
+- "Use de-ai to clean up this paragraph"
 - "Apply de-ai rules to my cover letter"
 
-## Adding more skills
+## Sources
 
-To add more custom skills to this local marketplace:
-
-1. Create a new skill folder in `~/.claude/skills/` (e.g., `my-skill/`)
-2. Add a `SKILL.md` with proper frontmatter
-3. Register it in `~/.claude/skills/.claude-plugin/marketplace.json`
-4. Enable it in settings: `"my-skill@local-skills": true`
-
-## Source
-
-Based on:
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
-- Custom Rules.md writing guidelines
