@@ -1,0 +1,9 @@
+{
+  "name": "de-ai",
+  "description": "Remove AI-generated writing patterns. Make text sound human.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Anshul"
+  },
+  "homepage": "https://github.com/i-am-anshul/de-ai"
+}

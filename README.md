@@ -2,13 +2,13 @@
 
 **Make AI-generated text sound human.**
 
-A Claude Code plugin that detects and removes AI writing patterns from any text—resumes, cover letters, LinkedIn posts, documentation, emails, articles.
+A Claude Code skill that detects and removes AI writing patterns from any text—resumes, cover letters, LinkedIn posts, documentation, emails, articles.
 
 ## Install
 
 ```bash
 /plugin marketplace add i-am-anshul/de-ai
-/plugin install de-ai
+/plugin install de-ai@de-ai-marketplace
 ```
 
 Works on **Windows**, **macOS**, and **Linux**. Requires [Claude Code](https://claude.ai/code).
@@ -35,7 +35,7 @@ Works on **Windows**, **macOS**, and **Linux**. Requires [Claude Code](https://c
 | **Em dash abuse** | multiple em-dashes per sentence | Use commas, periods |
 | **Rule of three** | forced X, Y, and Z patterns | Use actual count needed |
 
-See [SKILL.md](SKILL.md) for the complete detection rules and banned word list.
+See [SKILL.md](de-ai-plugin/skills/de-ai/SKILL.md) for the complete detection rules and banned word list.
 
 ## Usage
 
@@ -46,19 +46,18 @@ The skill activates automatically when you:
 
 Or invoke directly:
 ```
-Use de-ai on this paragraph
-Apply de-ai to my cover letter
+/de-ai:de-ai
 ```
 
 ## Why This Exists
 
 AI-generated text has tells. Recruiters spot them. Editors spot them. Readers spot them.
 
-This plugin embeds the detection rules from [Wikipedia's "Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) plus additional patterns into Claude's workflow, so your text passes the human test.
+This skill embeds the detection rules from [Wikipedia's "Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) plus additional patterns into Claude's workflow, so your text passes the human test.
 
 ## Keywords
 
-`ai-writing-detection` `remove-ai-patterns` `humanize-text` `claude-code-plugin` `chatgpt-detection` `ai-content-detector` `writing-assistant` `deai`
+`ai-writing-detection` `remove-ai-patterns` `humanize-text` `claude-code-skill` `chatgpt-detection` `ai-content-detector` `writing-assistant` `deai`
 
 ## License
 

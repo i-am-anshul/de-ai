@@ -7,7 +7,7 @@
     {
       "name": "de-ai",
       "description": "Remove AI-generated writing patterns. Make text sound human.",
-      "source": ".."
+      "source": "./de-ai-plugin"
     }
   ]
 }
