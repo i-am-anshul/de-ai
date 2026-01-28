@@ -1,12 +1,13 @@
 {
   "name": "de-ai-marketplace",
-  "description": "Skills for removing AI patterns from writing",
-  "plugins": {
-    "de-ai": {
+  "owner": {
+    "name": "Anshul"
+  },
+  "plugins": [
+    {
       "name": "de-ai",
       "description": "Remove AI-generated writing patterns. Make text sound human.",
-      "version": "1.0.0",
-      "path": ".."
+      "source": ".."
     }
-  }
+  ]
 }
